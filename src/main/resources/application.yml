@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: test
+        uri: http://httpbin.org:80
+        predicates:
+        - Path=/image/png
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
